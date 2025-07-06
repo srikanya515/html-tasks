@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum kit</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color:rgb(3, 11, 11);
+    }
+    h1{
+        font-size: 5rem;
+        color: azure;
+        text-shadow: 2px 0 greenyellow;
+    }
+    .drum{
+        outline: none;
+        border: 15px solid #404864;
+        font-size: 3.5rem;
+        line-height: 2;
+        font-weight: 900;
+        color: #e91d3f;
+        text-shadow: 3px o #0bedf3;
+        border-radius: 15px;
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        margin: 10px;
+        background-color: rgb(101, 130, 224);
+    }
+    .w{
+        background-image: url("../assets/img1.jpeg");
+    }
+    .a{
+        background-image: url("../assets/img2.jpeg");
+
+    }
+    .s{
+        background-image: url("../assets/img3.jpeg");
+
+    }
+    .d{
+        background-image: url("../assets/img4.jpeg");
+
+    }
+    .j{
+        background-image: url("../assets/img5.jpeg");
+
+    }
+    .k{
+        background-image: url("../assets/img6.jpeg");
+
+    }
+    .l{
+        background-image: url("../assets/img7.jpeg");
+
+    }
+    footer{
+        color:firebrick;
+        font-family: sans-serif;
+    }
+    .set{
+        margin: 10% auto;
+    }
+    .pressed{
+        box-shadow: 0 3px 4px 0 #0bedf3;
+        opacity: 0.6;
+    }
+    .red{
+        color: #e20899;
+    }
+    
+</style>
+<body>
+    <h1 id="drum">Drum kit</h1>
+
+    <div class="set">
+        <button class="w drum">w</button>
+        <button class="a drum">a</button>
+        <button class="s drum">s</button>
+        <button class="d drum">d</button>
+        <button class="j drum">j</button>
+        <button class="k drum">k</button>
+        <button class="l drum">l</button>
+ </div>
+ <script src="app.js"></script>
+ <footer>
+    Enjoy music🤩
+ </footer>
+</body>
+</html>

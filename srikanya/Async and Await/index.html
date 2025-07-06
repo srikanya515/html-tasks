@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #products{
+            height: 300px;
+            width: 400px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        async function data(){
+            let data= await fetch("https://dummyjson.com/product")
+            let {products}=await data.json()
+            console.log(products);
+            let  productsData=products.map(item=>{
+                return `
+                <div id="products">
+                    // <img src="${item.id} width="200px" height="200px">
+                    <h1>${item.id}</h1
+                    <h1>${item.title}</h1>
+                    <p>${item.discountPercentage}</p>
+                    <mark>${item.rating}</mark>
+                    </div>
+            
+                `
+            })
+          console.log(productsData);
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Width Toggle</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #myImage {
+            width: 200px; /* Initial width */
+            height: auto;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: width 0.3s ease-in-out; /* Smooth transition for width change */
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Image to Change its Width</h1>
+    <img id="myImage" src="../assets/nature1.jpeg" alt="Clickable Image">
+    <p>Current width: <span id="currentWidthDisplay">200px</span></p>
+
+    <script>
+        // Get the image element by its ID
+        const myImage = document.getElementById('myImage');
+        const currentWidthDisplay = document.getElementById('currentWidthDisplay');
+
+        // Define the two widths
+        const defaultWidth = 200; // in pixels
+        const increasedWidth = 400; // in pixels
+        let isIncreased = false; // To keep track of the current state
+
+        // Function to update the display text
+        function updateWidthDisplay(width) {
+            currentWidthDisplay.textContent = `${width}px`;
+        }
+
+        // Set initial display
+        updateWidthDisplay(defaultWidth);
+
+        // Add a click event listener to the image
+        myImage.addEventListener('click', () => {
+            if (isIncreased) {
+                // If currently increased, decrease it
+                myImage.style.width = `${defaultWidth}px`;
+                updateWidthDisplay(defaultWidth);
+            } else {
+                // If currently default, increase it
+                myImage.style.width = `${increasedWidth}px`;
+                updateWidthDisplay(increasedWidth);
+            }
+            // Toggle the state
+            isIncreased = !isIncreased;
+        });
+    </script>
+
+</body>
+</html>
